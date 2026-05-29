@@ -210,3 +210,8 @@ docker compose up --build
 The Dockerfile uses a multi-stage build:
 1. `gradle:jdk21` builds the project
 2. `nginx:alpine` serves the WASM output
+
+## Workflow Rules
+
+- **GitHub CLI** is enabled and `GITHUB_TOKEN` is configured. Use `gh` for PRs, issues, checks, and releases.
+- **Never commit or push without explicit user authorization.** All version control operations require the user's go-ahead.
