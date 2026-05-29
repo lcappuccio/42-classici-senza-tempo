@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
+import org.lcappuccio.classici.game.impl.FourInARowGame;
 import org.lcappuccio.classici.game.impl.TicTacToeGame;
 
 /**
@@ -17,6 +18,7 @@ public final class GameManager {
 
   static {
     register("Tic-Tac-Toe", TicTacToeGame::new);
+    register("Four in a Row", FourInARowGame::new);
   }
 
   private GameManager() {
