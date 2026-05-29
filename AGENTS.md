@@ -215,3 +215,8 @@ The Dockerfile uses a multi-stage build:
 
 - **GitHub CLI** is enabled and `GITHUB_TOKEN` is configured. Use `gh` for PRs, issues, checks, and releases.
 - **Never commit or push without explicit user authorization.** All version control operations require the user's go-ahead.
+
+## OpenSpec Naming
+
+- `openspec new change <name>` requires the name to **start with a letter** (a-z, A-Z). Numbers and special characters as the first character will be rejected.
+- Spec files under `openspec/specs/` have no naming restriction but should follow the same convention for consistency.
