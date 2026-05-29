@@ -133,12 +133,13 @@ public class TicTacToeGame implements Game {
       return false;
     }
     int gridSize = cellSize * BOARD_SIZE;
+    int adjustedY = Gdx.graphics.getHeight() - y;
     if (x < offsetX || x >= offsetX + gridSize
-        || y < offsetY || y >= offsetY + gridSize) {
+        || adjustedY < offsetY || adjustedY >= offsetY + gridSize) {
       return false;
     }
     int col = (x - offsetX) / cellSize;
-    int row = (y - offsetY) / cellSize;
+    int row = (adjustedY - offsetY) / cellSize;
     if (board[row][col] != 0) {
       return false;
     }
