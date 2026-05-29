@@ -1,20 +1,23 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  Recreation of "42 Classici Senza Tempo" (Nintendo DS compilation) as a web app.
+  Tech stack: LibGDX 1.14.1, TeaVM (WASM), LWJGL3 (desktop dev), Gradle, JDK 21.
+  Graphics: 100% geometric shapes via ShapeRenderer — no textures, bitmaps, or sprites.
+  Multiplayer: local hot-seat (turn-based, pass-the-device).
+  Deployment: Docker + nginx (multi-stage build).
+  Target: desktop browsers, tablets, phones.
+  Packages: org.lcappuccio.classici
+  License: GPL-3.0
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Keep proposals under 500 words
+    - Always include a "Non-goals" section
+  design:
+    - Reference the Game interface as the central abstraction
+    - All games must implement the same interface
+    - No external dependencies beyond LibGDX core + backends
+  tasks:
+    - Break tasks into chunks of max 2 hours
+    - List files to create/modify for each task

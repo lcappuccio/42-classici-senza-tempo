@@ -1,0 +1,10 @@
+dependencies {
+  implementation project(':core')
+  implementation "com.github.xpenatan.gdx-teavm:backend-web:$gdxTeaVMVersion"
+}
+
+tasks.register('buildDist', Copy) {
+  dependsOn classes
+  from 'src/main/webapp'
+  into "${buildDir}/dist"
+}

@@ -1,0 +1,3 @@
+include 'core', 'lwjgl3', 'teavm'
+
+rootProject.name = '42-classici-senza-tempo'

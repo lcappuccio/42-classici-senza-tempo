@@ -1,0 +1,20 @@
+apply plugin: 'application'
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_21
+  targetCompatibility = JavaVersion.VERSION_21
+}
+
+mainClassName = 'org.lcappuccio.classici.DesktopLauncher'
+
+dependencies {
+  implementation project(':core')
+  implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
+
+tasks.register('runApp', JavaExec) {
+  dependsOn classes
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = mainClassName
+}

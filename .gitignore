@@ -11,6 +11,7 @@ out/
 # Java
 *.class
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 *.nar
 *.ear
@@ -32,6 +33,9 @@ buildNumber.properties
 build/
 !**/src/main/**
 !**/src/test/**
+
+# Gradle
+.gradle/
 
 # Linux
 *~
