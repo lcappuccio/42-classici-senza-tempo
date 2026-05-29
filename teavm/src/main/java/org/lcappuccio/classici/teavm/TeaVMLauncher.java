@@ -1,8 +1,7 @@
 package org.lcappuccio.classici.teavm;
 
-import com.github.xpenatan.gdx.backends.teavm.TeaVMApplication;
-import com.github.xpenatan.gdx.backends.teavm.TeaVMApplicationConfiguration;
-
+import com.github.xpenatan.gdx.teavm.backends.web.WebApplication;
+import com.github.xpenatan.gdx.teavm.backends.web.WebApplicationConfiguration;
 import org.lcappuccio.classici.Core42Game;
 
 /**
@@ -13,10 +12,11 @@ public final class TeaVMLauncher {
   private TeaVMLauncher() {
   }
 
+  /** Application entry point. */
   public static void main(String[] args) {
-    TeaVMApplicationConfiguration config = new TeaVMApplicationConfiguration("canvas");
+    WebApplicationConfiguration config = new WebApplicationConfiguration("canvas");
     config.width = 0;
     config.height = 0;
-    new TeaVMApplication(new Core42Game(), config);
+    new WebApplication(new Core42Game(), config);
   }
 }
